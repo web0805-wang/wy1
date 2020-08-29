@@ -1,0 +1,139 @@
+header {
+  width: 100%;
+  height: 650px;
+  background: url(../img/dlbg.jpg);
+  position: relative; }
+
+header .box {
+  width: 365px;
+  min-height: 333px;
+  background: #fff;
+  position: absolute;
+  top: 130px;
+  right: 200px;
+  border-radius: 5px; }
+
+header .box-header {
+  padding: 25px; }
+
+header .box-header ul {
+  width: 317px;
+  height: 24px; }
+
+header .box-header ul li {
+  display: block;
+  width: 158px;
+  line-height: 24px;
+  float: left;
+  text-align: center;
+  font-size: 18px;
+  color: #cecece; }
+
+header .box-header ul li:nth-of-type(1) {
+  color: #000; }
+
+header .box-header li:nth-of-type(1) {
+  border-right: 1px solid #cecece; }
+
+header .box-content,
+header .box-content2 {
+  width: 365px;
+  height: 259px;
+  padding-top: 5px; }
+
+header .box-content2 {
+  display: none; }
+
+header .box-content div,
+header .box-content2 div {
+  width: 312px;
+  height: 32px;
+  border: 1px solid #666;
+  margin: 0 auto;
+  line-height: 32px; }
+
+header .box-content .inputs span,
+header .box-content2 .inputs span {
+  font-size: 24px;
+  margin: 0 5px 0 10px; }
+
+header .box-content .white,
+header .box-content2 .white {
+  width: 320px;
+  height: 16px;
+  border: none; }
+
+header .box-content div div input,
+header .box-content2 div div input {
+  height: 100%;
+  font-size: 16px;
+  line-height: 32px; }
+
+header .box-content .notice,
+header .box-content2 .notice {
+  width: 320px;
+  height: 17px;
+  margin-top: 16px;
+  line-height: 17px;
+  border: none;
+  display: none; }
+
+header .box-content .notice span,
+header .box-content2 .notice span {
+  font-size: 18px;
+  color: red; }
+
+header .box-content button,
+header .box-content2 button {
+  display: block;
+  width: 320px;
+  height: 44px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background: #00aeff;
+  font-size: 18px;
+  line-height: 44px;
+  margin: 20px auto 0; }
+
+header .box .text a {
+  color: #4aafe9;
+  text-decoration: none; }
+
+header .box .text {
+  border: none; }
+
+header .box .text .iconfont {
+  margin: 0 3px 0 0; }
+
+header .box-footer {
+  width: 100%;
+  height: 32px;
+  margin: 0 20px;
+  line-height: 32px;
+  position: relative;
+  padding-bottom: 20px; }
+
+header .box-footer a {
+  font-size: 14px;
+  color: #00aeff;
+  cursor: pointer; }
+
+header .box-footer a:nth-of-type(2) {
+  position: absolute;
+  right: 40px; }
+
+.box-content2 .info {
+  border: none;
+  height: 50px;
+  line-height: 50px;
+  position: relative; }
+
+.box-content2 .info a {
+  position: absolute;
+  right: 0; }
+
+section {
+  width: 100%;
+  height: 300px;
+  background-color: black; }
