@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "865350",
+      "name": "laba",
+      "font_class": "laba",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
       "icon_id": "1002349",
       "name": "扫一扫",
       "font_class": "552dc065f0478",
@@ -18,6 +25,34 @@
       "font_class": "suo",
       "unicode": "e697",
       "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "1105010",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1175453",
+      "name": "减",
+      "font_class": "jian",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "1313821",
+      "name": "图书馆",
+      "font_class": "tushu",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "1318925",
+      "name": "图书馆",
+      "font_class": "tushu1",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
     },
     {
       "icon_id": "1459371",
@@ -41,18 +76,18 @@
       "unicode_decimal": 58625
     },
     {
-      "icon_id": "3685039",
-      "name": "卡卷",
-      "font_class": "qiajuan",
-      "unicode": "e675",
-      "unicode_decimal": 58997
-    },
-    {
       "icon_id": "3735608",
       "name": "看单-01",
       "font_class": "kandan-",
       "unicode": "e729",
       "unicode_decimal": 59177
+    },
+    {
+      "icon_id": "4357020",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
     },
     {
       "icon_id": "4363181",
@@ -74,6 +109,20 @@
       "font_class": "mine-red",
       "unicode": "e506",
       "unicode_decimal": 58630
+    },
+    {
+      "icon_id": "5194319",
+      "name": "衣服",
+      "font_class": "yifu",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "5582668",
+      "name": "向上箭头",
+      "font_class": "een",
+      "unicode": "e507",
+      "unicode_decimal": 58631
     },
     {
       "icon_id": "5636737",
@@ -125,11 +174,25 @@
       "unicode_decimal": 58629
     },
     {
+      "icon_id": "7575851",
+      "name": "衣服",
+      "font_class": "yifu1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "7927762",
       "name": "用户反馈",
       "font_class": "wentifankui",
       "unicode": "e528",
       "unicode_decimal": 58664
+    },
+    {
+      "icon_id": "8022635",
+      "name": "项链",
+      "font_class": "xianglian",
+      "unicode": "e76a",
+      "unicode_decimal": 59242
     },
     {
       "icon_id": "8143892",
@@ -160,11 +223,18 @@
       "unicode_decimal": 58889
     },
     {
+      "icon_id": "9974166",
+      "name": "减",
+      "font_class": "jian1",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
       "icon_id": "10051210",
       "name": "tixing",
       "font_class": "tixing",
-      "unicode": "e615",
-      "unicode_decimal": 58901
+      "unicode": "e616",
+      "unicode_decimal": 58902
     },
     {
       "icon_id": "10134635",
@@ -172,6 +242,13 @@
       "font_class": "xingqiu",
       "unicode": "e502",
       "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "10135931",
+      "name": "加",
+      "font_class": "jia1",
+      "unicode": "e651",
+      "unicode_decimal": 58961
     },
     {
       "icon_id": "10188845",
@@ -200,6 +277,13 @@
       "font_class": "huise1",
       "unicode": "e51d",
       "unicode_decimal": 58653
+    },
+    {
+      "icon_id": "12082681",
+      "name": "向上",
+      "font_class": "up",
+      "unicode": "e604",
+      "unicode_decimal": 58884
     },
     {
       "icon_id": "13030139",
@@ -244,11 +328,25 @@
       "unicode_decimal": 59332
     },
     {
+      "icon_id": "14556041",
+      "name": "手办",
+      "font_class": "shouban",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
       "icon_id": "15582494",
       "name": "搜索",
       "font_class": "sousuo",
-      "unicode": "e603",
-      "unicode_decimal": 58883
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "15700146",
+      "name": "laba",
+      "font_class": "laba1",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
     }
   ]
 }

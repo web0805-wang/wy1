@@ -11,7 +11,16 @@
 </head>
 
 <body>
-    <!-- top-one -->
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/startMove.js"></script>
+    <script src="../js/slider.js"></script>
+    <script>
+        var slider = new Slider();
+        slider.showBtns();
+        slider.showNums();
+    </script>
+    <!-- top-wrap -->
     <div class="top-wrap">
         <div class="top-con">
             <div class="top-left">
@@ -32,13 +41,276 @@
                     </li>
                     <li>
                         客户服务
+                        <span class="iconfont icon-huise2"></span>
+                        <ul class="down">
+                            <li>
+                                <a href="http://bmall.163.com/bmall/helpCenter">规则中心</a>
+                            </li>
+                            <li>在线客服</li>
+                        </ul>
                     </li>
-                    <span class="iconfont icon-huise2"></span>
+
                 </ul>
             </div>
         </div>
 
     </div>
-</body>
+    <!-- header -->
+    <header>
+        <img src="../img/logo.png" alt="">
+        <div class="search">
+            <input type="text" placeholder="请输入搜索内容">
+            <span class="iconfont icon-sousuo"></span>
+            <span class="iconfont icon-cart-copy"></span>
+            <p class="num">1</p>
+        </div>
+    </header>
+
+    <!-- nav -->
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">居家生活</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/洗护.png" alt=""><span>洗护</span></li>
+                        <li><img src="../img/雨伞.png" alt=""><span>雨伞</span></li>
+                        <li><img src="../img/抱枕.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/水杯.png" alt=""><span>水杯</span></li>
+                        <li><img src="../img/拖鞋.png" alt=""><span>拖鞋</span></li>
+                        <li><img src="../img/洗护.png" alt=""><span>洗护</span></li>
+                        <li><img src="../img/收纳.png" alt=""><span>雨伞</span></li>
+                        <li><img src="../img/餐橱.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/床品.png" alt=""><span>水杯</span></li>
+                        <li><img src="../img/箱包.png" alt=""><span>拖鞋</span></li>
+                    </ul>
+                </div>
+
+            </li>
+            <li>
+                <a href="#">手办模型</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/积木棋牌.png" alt=""><span>积木棋牌</span></li>
+                        <li><img src="../img/毛绒.png" alt=""><span>雨伞</span></li>
+                        <li><img src="../img/抱枕.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/积木棋牌.png" alt=""><span>水杯</span></li>
+                        <li><img src="../img/手办公仔.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/大型雕像.png" alt=""><span>水杯</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">数码外设</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/电脑外设.png" alt=""><span>电脑外设</span></li>
+                        <li><img src="../img/鼠标垫.png" alt=""><span>雨伞</span></li>
+                        <li><img src="../img/手机壳.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/充电宝.png" alt=""><span>水杯</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">配饰挂件</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+                        <li><img src="../img/钥匙链.png" alt=""><span>钥匙链</span></li>
+                        <li><img src="../img/钱包卡套.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/徽章挂件.png" alt=""><span>水杯</span></li>
+                        <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+                        <li><img src="../img/钥匙链.png" alt=""><span>钥匙链</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">服装服饰</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/T恤.png" alt=""><span>T恤</span></li>
+                        <li><img src="../img/长短裤装.png" alt=""><span>卫衣</span></li>
+                        <li><img src="../img/外套卫衣.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/徽章挂件.png" alt=""><span>水杯</span></li>
+                        <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">图书文具</a>
+                <div class="list">
+                    <ul>
+                        <li><img src="../img/书写用品.png" alt=""><span>书写用品</span></li>
+                        <li><img src="../img/办公好物.png" alt=""><span>办公好物</span></li>
+                        <li><img src="../img/小说图书.png" alt=""><span>抱枕</span></li>
+                        <li><img src="../img/收纳.png" alt=""><span>水杯</span></li>
+
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- nav-top -->
+    <div class="nav-top">
+        <div class="nav-con">
+            <img src="../img/logo.png" alt="">
+
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">居家生活</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/洗护.png" alt=""><span>洗护</span></li>
+                            <li><img src="../img/雨伞.png" alt=""><span>雨伞</span></li>
+                            <li><img src="../img/抱枕.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/水杯.png" alt=""><span>水杯</span></li>
+                            <li><img src="../img/拖鞋.png" alt=""><span>拖鞋</span></li>
+                            <li><img src="../img/洗护.png" alt=""><span>洗护</span></li>
+                            <li><img src="../img/收纳.png" alt=""><span>雨伞</span></li>
+                            <li><img src="../img/餐橱.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/床品.png" alt=""><span>水杯</span></li>
+                            <li><img src="../img/箱包.png" alt=""><span>拖鞋</span></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="#">手办模型</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/积木棋牌.png" alt=""><span>积木棋牌</span></li>
+                            <li><img src="../img/毛绒.png" alt=""><span>雨伞</span></li>
+                            <li><img src="../img/抱枕.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/积木棋牌.png" alt=""><span>水杯</span></li>
+                            <li><img src="../img/手办公仔.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/大型雕像.png" alt=""><span>水杯</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">数码外设</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/电脑外设.png" alt=""><span>电脑外设</span></li>
+                            <li><img src="../img/鼠标垫.png" alt=""><span>雨伞</span></li>
+                            <li><img src="../img/手机壳.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/充电宝.png" alt=""><span>水杯</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">配饰挂件</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+                            <li><img src="../img/钥匙链.png" alt=""><span>钥匙链</span></li>
+                            <li><img src="../img/钱包卡套.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/徽章挂件.png" alt=""><span>水杯</span></li>
+                            <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+                            <li><img src="../img/钥匙链.png" alt=""><span>钥匙链</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">服装服饰</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/T恤.png" alt=""><span>T恤</span></li>
+                            <li><img src="../img/长短裤装.png" alt=""><span>卫衣</span></li>
+                            <li><img src="../img/外套卫衣.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/徽章挂件.png" alt=""><span>水杯</span></li>
+                            <li><img src="../img/手环.png" alt=""><span>手环</span></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">图书文具</a>
+                    <div class="list">
+                        <ul>
+                            <li><img src="../img/书写用品.png" alt=""><span>书写用品</span></li>
+                            <li><img src="../img/办公好物.png" alt=""><span>办公好物</span></li>
+                            <li><img src="../img/小说图书.png" alt=""><span>抱枕</span></li>
+                            <li><img src="../img/收纳.png" alt=""><span>水杯</span></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="nav-right">
+                <span class="iconfont icon-sousuo"></span>
+                <span class="iconfont icon-mine-red"></span>
+                <span class="iconfont icon-cart-copy"></span>
+                <p class="num">1</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div id="sliderBox">
+        <ul id="sliderList">
+            <li><img src="../img/banner1.jpg"></li>
+            <li><img src="../img/banner2.jpg"></li>
+            <li><img src="../img/banner3.jpg"></li>
+            <li><img src="../img/banner4.jpg"></li>
+            <li><img src="../img/banner4.jpg"></li>
+            <li><img src="../img/banner6.jpg"></li>
+        </ul>
+        <div id="btn">
+            <span>&lt;</span>
+            <span>&gt;</span>
+        </div>
+        <ul id="numList">
+            <li class="hover"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- nav-img -->
+
+    <div class="nav-img">
+        <span><img src="../img/1.png" alt=""><i>魔兽世界</i></span>
+        <span><img src="../img/7.png" alt=""><i>守望先锋</i></span>
+        <span><img src="../img/5.png" alt=""><i>炉石传说</i></span>
+        <span><img src="../img/4.png" alt=""><i>黑暗破坏神</i></span>
+        <span><img src="../img/2.png" alt=""><i>星际争霸2</i></span>
+        <span><img src="../img/6.png" alt=""><i>风暴英雄</i></span>
+        <span><img src="../img/3.png" alt=""><i>魔兽争霸3</i></span>
+        <span><img src="../img/8.png" alt=""><i>暴雪游戏</i></span>
+    </div>
+
+    <div class="hot">
+        <div class="hot-txt">
+            <span class="iconfont icon-zan_weidian"></span>
+            <p>人气热销</p>
+        </div>
+        <div class="hot-img">
+            <p class="hot-main"><img src="../img/r1.jpg" alt=""><span>魔兽世界 9.0暗影国度鼠标垫</span></p>
+            <p><img src="../img/r2.jpg" alt=""><span>魔兽世界 吉安娜法阵无线充电器</span></p>
+            <p><img src="../img/r3.jpg" alt=""><span>炉石酒馆盖毯 炉石传说</span></p>
+            <p><img src="../img/r4.jpg" alt=""><span>破坏球 毛绒抱枕 守望先锋</span></p>
+            <p><img src="../img/r5.jpg" alt=""><span>魔兽世界 拉格纳罗斯盖毯</span></p>
+        </div>
+
+    </div>
+
+</body><img src="" alt="">
 
 </html>
