@@ -149,19 +149,47 @@ section {
   overflow: hidden;
   width: 1090px;
   height: 160px;
-  margin: 0 auto 70px; }
-
-.foot ul {
-  display: block;
-  width: 1090px;
-  height: 16px;
-  margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto 70px;
+  position: relative; }
 
 .foot .one {
-  padding-top: 30px;
+  height: 51px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #2c2c2c; }
+  border-bottom: 1px solid #2c2c2c;
+  margin: 0 auto; }
+
+.foot .one li {
+  margin-right: 80px;
+  height: 51px;
+  font-size: 16px; }
+
+.foot .one li i {
+  margin-left: 25px; }
+
+.foot div {
+  width: 100%; }
+
+.foot .one li img {
+  width: 51px;
+  float: left; }
+
+.foot .one li i {
+  float: left;
+  line-height: 51px; }
+
+.foot ul:not(.one) {
+  display: block;
+  height: 16px;
+  margin-top: 15px;
+  text-align: center;
+  margin: 15px auto 0; }
+
+.foot .two {
+  width: 725px; }
+
+.foot .three {
+  width: 930px; }
 
 .foot ul li {
   display: block;
@@ -174,6 +202,9 @@ section {
   float: left;
   text-align: center;
   color: white; }
+
+.foot ul .last {
+  border: none; }
 
 .foot ul li a {
   color: white; }

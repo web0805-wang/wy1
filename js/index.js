@@ -1,13 +1,13 @@
 $(function() {
     // 客服服务下拉菜单
-    $(".top-right .iconfont").hover(function() {
+    $(".top-right li").eq(2).hover(function() {
         $(".top-right .down").show();
-        $(this).removeClass("icon-huise2");
-        $(this).addClass("icon-een");
+        $(this).find("span").removeClass("icon-huise2");
+        $(this).find("span").addClass("icon-een");
     }, function() {
         $(".top-right .down").hide();
-        $(this).removeClass("icon-een");
-        $(this).addClass("icon-huise2");
+        $(this).find("span").removeClass("icon-een");
+        $(this).find("span").addClass("icon-huise2");
     })
 
     //导航下拉
@@ -40,25 +40,63 @@ $(function() {
                     "color": "#cfd2d7"
                 });
         })
+    });
+
+
+    //头部导航 顶部固定
+    $(window).scroll(function() {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 220) {
+            console.log("aaa");
+            $(".nav-top").show();
+        }
+
+        if ($(window).scrollTop() < 220) {
+            console.log("aaa");
+            $(".nav-top").hide();
+        }
     })
 
 
-    //头部导航
-    console.log($(".nav-con>ul>li"));
-    $(".nav-con>ul>li").each(function(j) {
-        console.log($(".nav-con>ul>li").eq(j));
-        $(".nav-con>ul>li").eq(j).click(function() {
-            $(".nav-con>ul>li").eq(j).find(".list").show();
-        })
-    })
+
 
 
 
     //轮播图
-    // var slider = new Slider();
-    // slider.showBtns();
-    // slider.showNums();
 
+    var swiper1 = new Swiper('#swiper1', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // 点击切换
+    var swiper2 = new Swiper('#swiper2', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
 
 
