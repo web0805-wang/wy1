@@ -25,52 +25,63 @@ $(function() {
 
 
     //表单验证
-
-
-    var reg = [/^\w+@\w+(\.\w+)+$/, /^[a-zA-Z_]\w{5,14}$/, /^1(3|4|5|6|7|8|9)\d{9}$/]; //邮箱，密码，手机号
     $(".box-content button").click(function() {
-        $(this).css({
-            "color": "#cecece"
-        });
+        var val3 = $(".inputs input").eq(0).val();
+        var val4 = $(".inputs input").eq(1).val();
+        var flag1 = false;
+        var flag2 = false;
+        //验证账户不能为空
 
-        $(".box-content .notice").show();
-
-        var val1 = $(".box-content .inputs").first().children("input").val();
-        var val2 = $(".box-content .inputs").last().children("input").val();
-        console.log(val1);
-        console.log(val2);
-
-        var oInput = document.querySelectorAll(".box-content input");
-        var notice = document.querySelector(".notice");
-        var oSpan = notice.children[1];
-        console.log(oSpan);
-        console.log(oInput[0]);
-
-        // oInput[0].onchange = function() {
-        //     console.log("aaa");
-        //     if (!(reg[0].test(val1))) {
-        //         console.log("bbb");
-        //         oSpan.innerHTML("请输入正确的邮箱地址");
-        //     }
-        // }
-        oInput[0].onchange = function() {
-            var val = oInput[0].value;
-            if (!(reg[0].test(val))) {
-                oSpan.innerHTML = "!格式错误";
-            }
+        console.log(val3);
+        if (/^\s+$/gi.test(val3) || val3.length == 0) {
+            $(".notice").show();
+            $(".notice .txt").html("!请输入账户名");
+            flag1 = true;
+        } else if (!/^\w+@\w+(\.\w+)+$/.test(val3)) {
+            $(".notice").show();
+            $(".notice .txt").html("!请输入正确的邮箱")
+        } else {
+            $(".notice").hide();
         }
 
-        // $(".box-content .inputs").first().children("input").change(function() {
-        //     console.log("aaa");
-        //     if (!(reg[0].test(val1))) {
-        //         console.log("bbb");
-        //         $(".notice span").eq(1).html("请输入正确的邮箱地址");
-        //     }
-        // })
+        //验证密码
+        if (/^\s+$/gi.test(val4) || val4.length == 0) {
+            $(".notice").show();
+            $(".notice .txt").html("!请输入密码");
+            flag2 = true;
+        } else if (!(/^[a-zA-Z0-9_-]{8,16}$/.test(val4))) {
+            $(".notice").show();
+            $(".notice .txt").html("!密码为8-16个字符")
+        } else {
+            $(".notice").hide();
+        }
+        if (flag1 && flag2) {
+            $(".notice").show();
+            $(".notice .txt").html("!请输入账户名");
+        }
+        if (flag2 == false && flag1 == true) {
+            $(".notice").show();
+            $(".notice .txt").html("!请输入密码");
+        }
 
-        // if (val1 == "" || val2 == "") {
-        //     $(".notice span").eq(1).html("请输入账号");
-        // }
+        //登录接口
+
+        $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+            username: val3,
+            password: val4
+        }, data => {
+            console.log(data);
+            if (data.code) {
+                alert(data.msg);
+                location.href = "index.html";
+            } else {
+                alert(data.msg);
+            }
+
+        })
+
+
+
     })
 
 

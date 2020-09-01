@@ -73,7 +73,7 @@ body {
   font-size: 20px;
   color: #cdcdcd; }
 
-.main-con .step .blue .num {
+.main-con .step .one .num {
   color: #2c82ff;
   font-weight: 700;
   border: 2px solid #2c82ff; }
@@ -86,7 +86,7 @@ body {
   color: #cdcdcd;
   margin-top: 10px; }
 
-.main-con .step .blue .txt {
+.main-con .step .one .txt {
   color: #2c82ff;
   font-weight: 700; }
 
@@ -107,15 +107,29 @@ body {
   left: 293px; }
 
 .main-con .box,
-.main-con .box2 {
+.main-con .box2,
+.main-con .box3 {
   width: 444px;
   height: 277px;
   margin: 20px auto 0;
-  padding-top: 20px;
-  display: none; }
+  padding-top: 20px; }
 
-.main-con .box2 {
+.main-con .box {
   display: block; }
+
+.main-con .box .warn1,
+.main-con .box .warn2 {
+  display: inline-block;
+  width: 446px;
+  height: 28px;
+  color: red;
+  display: none;
+  font-size: 14px;
+  line-height: 28px; }
+
+.main-con .box2,
+.main-con .box3 {
+  display: none; }
 
 .main-con .box .wrap > div {
   width: 100%;
@@ -138,11 +152,10 @@ body {
   display: none; }
 
 .main-con .box .password {
-  margin-top: 28px;
-  margin-bottom: 28px; }
+  margin-top: 20px; }
 
 .main-con .box .agree {
-  margin: 0;
+  margin: 28px auto 0;
   color: #666;
   font-size: 14px;
   position: relative;
@@ -212,6 +225,16 @@ body {
   line-height: 24px;
   margin: 11px;
   float: left; }
+
+.main-con .box2 .notice {
+  width: 400px;
+  height: 28px; }
+
+.main-con .box2 .notice .txt {
+  min-height: 28px;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #ea3d3d; }
 
 footer {
   width: 100%;

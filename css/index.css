@@ -58,6 +58,9 @@ body {
   padding-right: 10px;
   position: relative; }
 
+.top-right > ul > li > a {
+  color: #7f93a9; }
+
 .top-right ul li span {
   font-size: 10px; }
 

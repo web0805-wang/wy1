@@ -106,15 +106,6 @@ $(function() {
     });
 
 
-    //回到顶部
-    // var wh = $(window).height();
-    // console.log(wh);
-    // $(window).scroll(function() {
-    //     if ($(window).scrollTop > 10) {
-    //         $(".floor").show();
-    //     }
-    // })
-
 
 
 
