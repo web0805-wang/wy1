@@ -661,14 +661,24 @@ section {
   border: none;
   font-size: 14px; }
 
+body {
+  position: relative; }
+
+.right-window {
+  position: fixed;
+  top: 450px;
+  right: 0;
+  z-index: 1000;
+  background: #002958; }
+
 .floor {
   width: 158px;
   height: 50px;
   border: 1px solid #1f5287;
   text-align: center; }
 
-.floor1 span,
-.floor3 span {
+.floor1 > span,
+.floor3 > span {
   font-size: 22px;
   color: orange;
   line-height: 50px; }
@@ -679,13 +689,34 @@ section {
   color: #0fa5f2;
   line-height: 50px; }
 
+.floor2 p {
+  font-size: 14px;
+  color: #0fa5f2;
+  line-height: 50px; }
+
 .floor3 i {
   margin-left: 10px;
   font-size: 16px;
   color: orange;
   line-height: 50px; }
 
-.floor2 p {
+.floor4 span {
+  font-size: 25px;
+  line-height: 50px;
+  margin-right: 20px;
+  color: #a0aeb9; }
+
+.floor5 {
+  display: none; }
+
+.floor5 span {
   font-size: 14px;
-  color: #0fa5f2;
-  line-height: 50px; }
+  line-height: 50px;
+  margin-right: 5px;
+  color: #a0aeb9; }
+
+.floor5 i {
+  font-size: 14px;
+  line-height: 50px;
+  margin-right: 20px;
+  color: #a0aeb9; }
