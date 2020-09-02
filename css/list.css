@@ -27,14 +27,19 @@
   position: relative;
   float: left; }
 
-.content .box .four {
+.content .box ul li:nth-of-type(4) {
   margin-right: 0; }
 
-.content .box > ul > li > img {
+.content .box ul li:nth-of-type(8) {
+  margin-right: 0; }
+
+.content .box ul li:nth-of-type(12) {
+  margin-right: 0; }
+
+.content .box > ul > li > a > img {
   width: 210px;
   height: 210px;
-  margin: 0 auto;
-  background: red; }
+  margin: 0 auto; }
 
 .content .box > ul > li > i {
   width: 90%;

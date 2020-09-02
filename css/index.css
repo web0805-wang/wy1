@@ -680,8 +680,8 @@ body {
   border: 1px solid #1f5287;
   text-align: center; }
 
-.floor1 > span,
-.floor3 > span {
+.floor1 > a > span,
+.floor3 > a > span {
   font-size: 22px;
   color: orange;
   line-height: 50px; }
