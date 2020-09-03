@@ -56,12 +56,18 @@ $(function() {
 
 
 
-        //回到顶部
+        //回到顶部显示隐藏
         if ($(window).scrollTop() > 10) {
             $(".right-window .floor5").show();
         } else {
             $(".right-window .floor5").hide();
         }
+
+        // $(".right-window .floor5").click(function() {
+        //     $(window).scrollTop() = 0;
+        // })
+
+
     })
 
 
@@ -104,10 +110,5 @@ $(function() {
             prevEl: '.swiper-button-prev',
         },
     });
-
-
-
-
-
 
 })

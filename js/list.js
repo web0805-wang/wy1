@@ -135,8 +135,10 @@ $(function() {
         // })
 
     // 查询数据
+    let id = JSON.parse(localStorage.getItem("uid"));
+    console.log(id);
     $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
-        uid: 38707,
+        uid: id,
         pagesize: 100
     }, data => {
         console.log(data.data);
@@ -149,7 +151,7 @@ $(function() {
             <a href="detail.html?id=${data.data[i].pid}">
             <img src="${data.data[i].pimg}" alt="">
             </a>
-            
+
             <i>${data.data[i].pname}</i>
             <p>
                 <span class="txt">商城价</span>

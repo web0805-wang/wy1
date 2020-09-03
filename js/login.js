@@ -77,6 +77,7 @@ $(function() {
             } else {
                 alert(data.msg);
             }
+            localStorage.setItem("uid", data.data.id);
 
         })
 

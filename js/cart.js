@@ -1,17 +1,4 @@
 $(function() {
-
-    //     查询用户购物车中的商品 接口
-
-    // 接口地址：http://jx.xuzhixiang.top/ap/api/cart-list.php
-    // 接口请求方式：get
-    // 接口参数：
-    //      id  用户id
-
-    // 使用方式
-    //      获取id为1的用户的购物车
-    //      http://jx.xuzhixiang.top/ap/api/cart-list.php?id=1
-
-
     $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
         id: 38707
     }, data => {
@@ -23,7 +10,7 @@ $(function() {
             str +=
                 `
                 <div class="cart-con">
-                <input type="checkbox">
+                <input type="checkbox" class="perCheck">
                 <span class="all"></span>
                 <span class="info">
                     <img src="${data.data[i].pimg}" alt="">
@@ -31,16 +18,16 @@ $(function() {
                 </span>
             <span class="price">${data.data[i].pprice}</span>
             <span class="num">
-                <div class="main-num">
-                <span></span>
+              
+            
             <div class="add">
-                <span class="iconfont icon-jian1"></span>
-                <span>${data.data[i].pnum}</span>
+                <span class="iconfont icon-jian1" data-pid=${data.data[i].pid}></span>
+                <span class="number">${data.data[i].pnum}</span>
                 <span class="iconfont 
-                            icon-jia1">
+                            icon-jia1" data-pid=${data.data[i].pid}>
                 </span>
             </div>
-        </div>
+         
 
         </span>
         <span class="sub">${data.data[i].pnum * data.data[i].pprice}</span>
@@ -51,87 +38,141 @@ $(function() {
             $(".cart-main .cart").html(str);
 
         })
+
+
         console.log($(".cart-main .cart .cart-con"));
         var per = $(".cart-main .cart .cart-con");
-        console.log(per);
-
-        //循环
+        var count;
+        let id = JSON.parse(localStorage.getItem("uid"));
         $(per).each(function(i) {
-
             //加
-            $(this).eq(i).find(".add").find(".icon-jia1").click(function() {
-                var num = $(this).parent().find("span").eq(1).html(); //获取数量
-                console.log(num);
+            $(".icon-jia1").eq(i).click(function() {
+                    var num = +$(this).prev().html();
+                    num += 1;
+                    $(this).prev().html(num);
 
-                console.log($(this).eq(i));
-                console.log("hhh");
+                    //小计
+                    var price = $(this).parent().parent().siblings(".price").html();
+                    count = parseFloat(num * price);
+                    $(this).parent().parent().siblings(".sub").html(count);
+                    //更新数据
+                    total();
 
-                num = Number(num);
-                num += 1;
-                this
-                //小计跟着加
-                var perPrice = $(this).parent().parent().parent().parent().find(".price").html();
-                console.log(perPrice);
-                console.log(num * perPrice);
-                $(per).eq(i).find(".sub").html(num * perPrice);
-                //把num再放回去，保证跟着变
-                $(this).parent().find("span").eq(1).html(num);
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                        uid: id,
+                        pid: $(this).attr("data-pid"),
+                        pnum: num
+                    }, data => {
+                        console.log(data);
+                    })
+                })
+                //减
+
+            $(".icon-jian1").eq(i).click(function() {
+                console.log("fff");
+                var num = +$(this).next().html();
+                num -= 1;
+                if (num <= 1) {
+                    num = 1;
+                }
+                $(this).next().html(num);
+                total();
+                //小计
+                var price = $(this).parent().parent().siblings(".price").html();
+                count = parseFloat(num * price);
+                $(this).parent().parent().siblings(".sub").html(count);
+                //数据更新
+
+
+                $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                    uid: id,
+                    pid: $(this).attr("data-pid"),
+                    pnum: num
+                }, data => {
+                    console.log(data);
+                })
             })
 
-            //减
-            $(this).eq(i).find(".add").find(".icon-jian1").click(function() {
-                    var num = $(this).parent().find("span").eq(1).html();
-                    console.log(num);
-                    console.log("hhh");
-                    num = Number(num);
-                    num -= 1;
-                    var perPrice = $(this).parent().parent().parent().parent().find(".price").html();
-                    console.log(perPrice);
-                    console.log(num * perPrice);
-                    $(per).eq(i).find(".sub").html(num * perPrice);
 
-                    if (num < 1) {
-                        // console.log($(this).parent().parent().parent().parent());
-                        //减到0直接删除这一条信息
-                        $(this).parent().parent().parent().parent().remove();
-                        //删除购物车的数据
-                        // $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
-                        //     uid: 38707,
-                        //     pid: $(this)
-                        // }, data => {
-                        //     console.log(data);
-                        // })
-
-                    }
-                    $(this).parent().find("span").eq(1).html(num);
+            //删除
+            $(this).eq(i).find(".del").click(function() {
+                //删除dom结构
+                $(this).parent().remove();
+                //删除购物车数据
+                console.log($(this).attr("data-pid"));
+                $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
+                    uid: id,
+                    pid: $(this).attr("data-pid")
+                }, data => {
+                    console.log(data);
                 })
-                //     //删除购物车数据
-                // $(this).eq(i).find(".del").click(function() {
-                //     console.log($(this).attr("data-pid"));
-                //     $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
-                //         uid: 38707,
-                //         pid: $(this).attr("data-pid")
-                //     }, data => {
-                //         console.log(data);
-                //     })
-                // })
+                total();
+            })
+
+            //判断全选 
+            //全选按钮
+            $("#checkAll").click(function() {
+                $(".perCheck").prop("checked", $(this).prop('checked'));
+                total();
+            })
+
+            //单选框
+            let count2 = 0;
+            $(".perCheck").click(function() {
+                var flag = true;
+                $(".perCheck").each(function(i, v) {
+                    console.log(v);
+                    if (v.checked === false) {
+                        flag = false;
+                    }
+                })
+                $("#checkAll").prop("checked", flag);
+                total();
+            })
+
+            //计算总价
+
+
+            function total() {
+                let counts = 0;
+                $(".cart .sub").each(function(i, v) {
+
+                    console.log(i, v);
+                    var num = +$(".number").eq(i).html();
+                    console.log(num);
+                    var price = $(".cart .price").eq(i).html();
+                    console.log(price);
+
+                    if ($(".perCheck").eq(i).prop('checked')) {
+                        counts = parseFloat(counts + num * price);
+                    }
+                    console.log(counts);
+                    $("#total").html(`总价：${counts}`);
+
+                })
+            }
+            // total();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         })
-
-
-
-
     })
-
-
-
-
-
-
-
-
-
-
-
 
 
 
